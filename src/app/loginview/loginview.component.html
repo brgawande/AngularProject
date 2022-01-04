@@ -1,0 +1,142 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2>Angular project</h2>
+    <div class="d-flex">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add Project
+      </button>
+      <button routerLink="/login" class="btn btn-primary mx-3">Log Out</button>
+    </div>
+  </div>
+</nav>
+
+<!-- table shown here -->
+
+<table class="table table-bordered border-dark">
+  <thead>
+    <tr>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Global Master</th>
+      <th scope="col">Indicator</th>
+      <th scope="col">Technical Person</th>
+      <th scope="col">Forecast generator</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>CHIP ENG SENG CONTRACTORS(1998)</td>
+      <td>HBD PROJECT SENGKANG N4 C39/C40(1188 units)</td>
+      <td>HDB-PPVC</td>
+      <td>S2-PUHS</td>
+      <td>Ivy Chong</td>
+      <td>400B, 400C, 400E, 401A, 401B, 401D, 401E, 401F, 4014</td>
+      <td>
+        <button class="border-0"><i class="bi bi-eye"></i></button>
+        <button class="border-0"><i class="bi bi-pencil-fill"></i></button>
+        <button class="border-0"><i class="bi bi-trash"></i></button>
+        <!-- <button class="btn btn-danger">View</button>
+        <button class="btn btn-danger">Edit</button>
+        <button class="btn btn-danger">Delete</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- form -->
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="CustomerName"
+              placeholder="Customer name"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="Projectname"
+              placeholder="Project Name"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="GlobalMaster"
+              placeholder="Global Master"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="Indicator"
+              placeholder="Indicator"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="TechnicalPerson"
+              placeholder="Technical Person"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              formControlName="ForecastGenerator"
+              placeholder="forecast generator"
+              class="form-control"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="addLoginv()">
+          Add Project Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

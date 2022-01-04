@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "name": "bhushan",
+      "mobile": "9568523",
+      "email": "gdg@gmail.com",
+      "password": "12589635",
+      "id": 1
+    },
+    {
+      "name": "bhushan gawande",
+      "mobile": "9359512750",
+      "email": "brgawande@gmail.com",
+      "password": "9359512750",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
